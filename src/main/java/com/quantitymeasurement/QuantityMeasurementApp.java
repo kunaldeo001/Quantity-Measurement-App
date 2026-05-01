@@ -26,4 +26,12 @@ public class QuantityMeasurementApp {
     public int hashCode() {
         return Objects.hash(value * unit.conversionFactor, unit.type);
     }
+
+    public QuantityMeasurementApp add(QuantityMeasurementApp that) {
+        if (this.unit.type != that.unit.type) {
+            throw new IllegalArgumentException("Cannot add different measurement types");
+        }
+        double sumInBase = (this.value * this.unit.conversionFactor) + (that.value * that.unit.conversionFactor);
+        return new QuantityMeasurementApp(sumInBase / this.unit.conversionFactor, this.unit);
+    }
 }
