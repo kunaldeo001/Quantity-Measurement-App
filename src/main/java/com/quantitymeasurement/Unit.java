@@ -1,30 +1,70 @@
 package com.quantitymeasurement;
 
-public enum Unit {
-    INCH(1.0, MeasurementType.LENGTH),
-    FEET(12.0, MeasurementType.LENGTH),
-    YARD(36.0, MeasurementType.LENGTH),
-    CM(0.4, MeasurementType.LENGTH),
+public interface Unit {
+    double getConversionFactor();
+    MeasurementType getType();
 
-    // Volume units
-    GALLON(3.78, MeasurementType.VOLUME),
-    LITRE(1.0, MeasurementType.VOLUME),
-    ML(0.001, MeasurementType.VOLUME),
-
-    // Weight units
-    KILOGRAM(1.0, MeasurementType.WEIGHT),
-    GRAM(0.001, MeasurementType.WEIGHT),
-    TONNE(1000.0, MeasurementType.WEIGHT);
-
-    public final double conversionFactor;
-    public final MeasurementType type;
-
-    Unit(double conversionFactor, MeasurementType type) {
-        this.conversionFactor = conversionFactor;
-        this.type = type;
+    enum MeasurementType {
+        LENGTH, VOLUME, WEIGHT
     }
 
-    public enum MeasurementType {
-        LENGTH, VOLUME, WEIGHT
+    enum LengthUnit implements Unit {
+        INCH(1.0), FEET(12.0), YARD(36.0), CM(0.4);
+
+        private final double conversionFactor;
+
+        LengthUnit(double conversionFactor) {
+            this.conversionFactor = conversionFactor;
+        }
+
+        @Override
+        public double getConversionFactor() {
+            return conversionFactor;
+        }
+
+        @Override
+        public MeasurementType getType() {
+            return MeasurementType.LENGTH;
+        }
+    }
+
+    enum VolumeUnit implements Unit {
+        GALLON(3.78), LITRE(1.0), ML(0.001);
+
+        private final double conversionFactor;
+
+        VolumeUnit(double conversionFactor) {
+            this.conversionFactor = conversionFactor;
+        }
+
+        @Override
+        public double getConversionFactor() {
+            return conversionFactor;
+        }
+
+        @Override
+        public MeasurementType getType() {
+            return MeasurementType.VOLUME;
+        }
+    }
+
+    enum WeightUnit implements Unit {
+        KILOGRAM(1.0), GRAM(0.001), TONNE(1000.0);
+
+        private final double conversionFactor;
+
+        WeightUnit(double conversionFactor) {
+            this.conversionFactor = conversionFactor;
+        }
+
+        @Override
+        public double getConversionFactor() {
+            return conversionFactor;
+        }
+
+        @Override
+        public MeasurementType getType() {
+            return MeasurementType.WEIGHT;
+        }
     }
 }

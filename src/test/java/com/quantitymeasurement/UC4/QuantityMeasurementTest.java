@@ -9,22 +9,22 @@ public class QuantityMeasurementTest {
 
     @Test
     public void given3FeetAnd1Yard_WhenCompared_ShouldReturnTrue() {
-        QuantityMeasurementApp feet = new QuantityMeasurementApp(3.0, Unit.FEET);
-        QuantityMeasurementApp yard = new QuantityMeasurementApp(1.0, Unit.YARD);
+        QuantityMeasurementApp feet = new QuantityMeasurementApp(3.0, Unit.LengthUnit.FEET);
+        QuantityMeasurementApp yard = new QuantityMeasurementApp(1.0, Unit.LengthUnit.YARD);
         assertEquals(feet, yard);
     }
 
     @Test
     public void given1FeetAnd1Yard_WhenCompared_ShouldReturnFalse() {
-        QuantityMeasurementApp feet = new QuantityMeasurementApp(1.0, Unit.FEET);
-        QuantityMeasurementApp yard = new QuantityMeasurementApp(1.0, Unit.YARD);
+        QuantityMeasurementApp feet = new QuantityMeasurementApp(1.0, Unit.LengthUnit.FEET);
+        QuantityMeasurementApp yard = new QuantityMeasurementApp(1.0, Unit.LengthUnit.YARD);
         assertNotEquals(feet, yard);
     }
 
     @Test
     public void given1InchAnd1Yard_WhenCompared_ShouldReturnFalse() {
-        QuantityMeasurementApp inch = new QuantityMeasurementApp(1.0, Unit.INCH);
-        QuantityMeasurementApp yard = new QuantityMeasurementApp(1.0, Unit.YARD);
+        QuantityMeasurementApp inch = new QuantityMeasurementApp(1.0, Unit.LengthUnit.INCH);
+        QuantityMeasurementApp yard = new QuantityMeasurementApp(1.0, Unit.LengthUnit.YARD);
         assertNotEquals(inch, yard);
     }
 }
