@@ -8,14 +8,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class QuantityMeasurementTest {
 
     @Test
-    public void given1FeetAnd1Kg_WhenAdded_ShouldThrowException() {
+    public void Uc13_given1FeetAnd1Kg_WhenAdded_ShouldThrowException() {
         QuantityMeasurementApp feet = new QuantityMeasurementApp(1.0, Unit.LengthUnit.FEET);
         QuantityMeasurementApp kg = new QuantityMeasurementApp(1.0, Unit.WeightUnit.KILOGRAM);
         assertThrows(IllegalArgumentException.class, () -> feet.add(kg));
     }
 
     @Test
-    public void given1LitreAnd1Kg_WhenSubtracted_ShouldThrowException() {
+    public void Uc13_given1LitreAnd1Kg_WhenSubtracted_ShouldThrowException() {
         QuantityMeasurementApp litre = new QuantityMeasurementApp(1.0, Unit.VolumeUnit.LITRE);
         QuantityMeasurementApp kg = new QuantityMeasurementApp(1.0, Unit.WeightUnit.KILOGRAM);
         assertThrows(IllegalArgumentException.class, () -> litre.subtract(kg));

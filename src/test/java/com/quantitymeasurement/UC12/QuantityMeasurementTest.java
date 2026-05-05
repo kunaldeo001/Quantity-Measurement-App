@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class QuantityMeasurementTest {
 
     @Test
-    public void given1FeetAnd12Inch_WhenSubtracted_ShouldReturn0Feet() {
+    public void Uc12_given1FeetAnd12Inch_WhenSubtracted_ShouldReturn0Feet() {
         QuantityMeasurementApp feet = new QuantityMeasurementApp(1.0, Unit.LengthUnit.FEET);
         QuantityMeasurementApp inch = new QuantityMeasurementApp(12.0, Unit.LengthUnit.INCH);
         QuantityMeasurementApp result = feet.subtract(inch);
@@ -16,7 +16,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given1KgAnd500Gram_WhenSubtracted_ShouldReturn500Gram() {
+    public void Uc12_given1KgAnd500Gram_WhenSubtracted_ShouldReturn500Gram() {
         QuantityMeasurementApp kg = new QuantityMeasurementApp(1.0, Unit.WeightUnit.KILOGRAM);
         QuantityMeasurementApp gram = new QuantityMeasurementApp(500.0, Unit.WeightUnit.GRAM);
         QuantityMeasurementApp result = kg.subtract(gram);
@@ -25,14 +25,14 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given10Feet_WhenDividedBy2_ShouldReturn5Feet() {
+    public void Uc12_given10Feet_WhenDividedBy2_ShouldReturn5Feet() {
         QuantityMeasurementApp feet = new QuantityMeasurementApp(10.0, Unit.LengthUnit.FEET);
         QuantityMeasurementApp result = feet.divide(2);
         assertEquals(5.0, result.getValue(), 0.001);
     }
 
     @Test
-    public void given10Feet_WhenDividedBy0_ShouldThrowException() {
+    public void Uc12_given10Feet_WhenDividedBy0_ShouldThrowException() {
         QuantityMeasurementApp feet = new QuantityMeasurementApp(10.0, Unit.LengthUnit.FEET);
         assertThrows(ArithmeticException.class, () -> feet.divide(0));
     }

@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class QuantityMeasurementTest {
 
     @Test
-    public void given1GallonAnd3Litre78_WhenAddedInGallon_ShouldReturn2Gallon() {
+    public void Uc7_given1GallonAnd3Litre78_WhenAddedInGallon_ShouldReturn2Gallon() {
         QuantityMeasurementApp gallon = new QuantityMeasurementApp(1.0, Unit.VolumeUnit.GALLON);
         QuantityMeasurementApp litre = new QuantityMeasurementApp(3.78, Unit.VolumeUnit.LITRE);
         QuantityMeasurementApp result = gallon.add(litre, Unit.VolumeUnit.GALLON);
@@ -17,7 +17,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given1FeetAnd12Inch_WhenAddedInFeet_ShouldReturn2Feet() {
+    public void Uc7_given1FeetAnd12Inch_WhenAddedInFeet_ShouldReturn2Feet() {
         QuantityMeasurementApp feet = new QuantityMeasurementApp(1.0, Unit.LengthUnit.FEET);
         QuantityMeasurementApp inch = new QuantityMeasurementApp(12.0, Unit.LengthUnit.INCH);
         QuantityMeasurementApp result = feet.add(inch, Unit.LengthUnit.FEET);

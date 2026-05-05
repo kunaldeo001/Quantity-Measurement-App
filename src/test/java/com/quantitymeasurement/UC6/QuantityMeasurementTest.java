@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class QuantityMeasurementTest {
 
     @Test
-    public void given2InchAnd2Inch_WhenAdded_ShouldReturn4Inch() {
+    public void Uc6_given2InchAnd2Inch_WhenAdded_ShouldReturn4Inch() {
         QuantityMeasurementApp inch1 = new QuantityMeasurementApp(2.0, Unit.LengthUnit.INCH);
         QuantityMeasurementApp inch2 = new QuantityMeasurementApp(2.0, Unit.LengthUnit.INCH);
         QuantityMeasurementApp expected = new QuantityMeasurementApp(4.0, Unit.LengthUnit.INCH);
@@ -17,7 +17,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given1FeetAnd2Inch_WhenAdded_ShouldReturn14Inch() {
+    public void Uc6_given1FeetAnd2Inch_WhenAdded_ShouldReturn14Inch() {
         QuantityMeasurementApp feet = new QuantityMeasurementApp(1.0, Unit.LengthUnit.FEET);
         QuantityMeasurementApp inch = new QuantityMeasurementApp(2.0, Unit.LengthUnit.INCH);
         QuantityMeasurementApp expected = new QuantityMeasurementApp(14.0, Unit.LengthUnit.INCH);
@@ -29,7 +29,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given1FeetAnd1Feet_WhenAdded_ShouldReturn24Inch() {
+    public void Uc6_given1FeetAnd1Feet_WhenAdded_ShouldReturn24Inch() {
         QuantityMeasurementApp feet1 = new QuantityMeasurementApp(1.0, Unit.LengthUnit.FEET);
         QuantityMeasurementApp feet2 = new QuantityMeasurementApp(1.0, Unit.LengthUnit.FEET);
         QuantityMeasurementApp expected = new QuantityMeasurementApp(24.0, Unit.LengthUnit.INCH);
